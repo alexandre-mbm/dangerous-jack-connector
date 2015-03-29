@@ -31,3 +31,8 @@ uninstall:
 dist:
 	git archive --format=tar --prefix=$(NAME)-$(VERSION)/ $(VERSION) | gzip -9 > $(NAME)-$(VERSION).tar.gz
 
+clean:
+	@echo -e "Cleaning current directory"
+	@echo -e "  Erasing all *.tar.gz files..."
+	@rm *.tar.gz
+
