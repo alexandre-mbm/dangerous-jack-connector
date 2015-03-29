@@ -15,8 +15,6 @@ install:
 	@echo -e "  Copying scripts..."
 	@install -Dm755 $(NAME).sh $(DESTDIR)$(LIBDIR)$(NAME)
 	@install -Dm644 98-$(NAME).rules $(DESTDIR)$(LIBDIR)$(CONFDIR)98-$(NAME).rules
-	@echo -e "  Reloading udev's rules..."	
-	@udevadm control --reload-rules
 
 .PHONY: uninstall
 uninstall:
@@ -24,8 +22,6 @@ uninstall:
 	@echo -e "  Removing scripts..."
 	@rm $(DESTDIR)$(LIBDIR)$(NAME)
 	@rm $(DESTDIR)$(LIBDIR)$(CONFDIR)98-$(NAME).rules
-	@echo -e "  Reloading udev's rules..."
-	@udevadm control --reload-rules
 
 .PHONY: dist
 dist:
