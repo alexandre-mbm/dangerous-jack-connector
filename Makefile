@@ -30,7 +30,7 @@ uninstall:
 .PHONY: dist
 dist:
 	git archive --format=tar --prefix=$(NAME)-$(VERSION)/ $(VERSION) | gzip -9 > $(NAME)-$(VERSION).tar.gz
-	md5sum $(NAME)-$(VERSION).tar.gz
+	@md5sum $(NAME)-$(VERSION).tar.gz
 
 clean:
 	@echo -e "Cleaning current directory"
