@@ -13,8 +13,8 @@ CONFDIR = /rules.d/
 install:
 	@echo -e "Installing $(NAME)"
 	@echo -e "  Copying scripts..."
-	@install -m755 $(NAME).sh $(DESTDIR)$(LIBDIR)$(NAME)
-	@install -m644 98-$(NAME).rules $(DESTDIR)$(LIBDIR)$(CONFDIR)
+	@install -Dm755 $(NAME).sh $(DESTDIR)$(LIBDIR)$(NAME)
+	@install -Dm644 98-$(NAME).rules $(DESTDIR)$(LIBDIR)$(CONFDIR)
 	@echo -e "  Reloading udev's rules..."	
 	@udevadm control --reload-rules
 
