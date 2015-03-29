@@ -1,7 +1,7 @@
 # based on example https://projects.archlinux.org/abs.git/tree/Makefile
 
 NAME = dangerous-jack-connector
-VERSION = 0.1.0
+VERSION = 0.1.1
 
 DESTDIR = 
 LIBDIR = /lib/udev/
@@ -14,7 +14,7 @@ install:
 	@echo -e "Installing $(NAME)"
 	@echo -e "  Copying scripts..."
 	@install -m755 $(NAME).sh $(DESTDIR)$(LIBDIR)$(NAME)
-	@install -m755 98-$(NAME).rules $(DESTDIR)$(LIBDIR)$(CONFDIR)
+	@install -m644 98-$(NAME).rules $(DESTDIR)$(LIBDIR)$(CONFDIR)
 	@echo -e "  Reloading udev's rules..."	
 	@udevadm control --reload-rules
 
