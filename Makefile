@@ -4,7 +4,7 @@ NAME = dangerous-jack-connector
 VERSION = 0.1.3
 
 DESTDIR = 
-LIBDIR = /lib/udev/
+LIBDIR = /usr/lib/udev/
 CONFDIR = /rules.d/
 
 # /lib/udev/rules.d/
