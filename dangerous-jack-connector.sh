@@ -3,6 +3,7 @@
 # The MIT License (MIT)
 #
 # Copyright (c) 2015 Alexandre Magno ‒ alexandre.mbm@gmail.com
+# Copyright (c) 2015 Mattias Andrée ‒ maandree@member.fsf.org
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -23,11 +24,9 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-export DISPLAY=:0
-
 SOUND="/usr/share/sounds/freedesktop/stereo/suspend-error.oga"
 
 for i in {1..4}
 do
-    canberra-gtk-play --file="$SOUND"
+    ffmpeg -i "$SOUND" -f wav - 2>/dev/null | aplay 2>/dev/null
 done
