@@ -1,7 +1,7 @@
 # based on example https://projects.archlinux.org/abs.git/tree/Makefile
 
 NAME = dangerous-jack-connector
-VERSION = 0.1.3
+VERSION = 0.1.4
 
 DESTDIR = 
 LIBDIR = /usr/lib/udev/
